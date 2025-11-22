@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Pokedex React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+A React application that displays a list of Pokemon using mock API data.
+Includes search filtering, type filtering, and a grid layout for Pokemon details.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Mock API module with Pokemon list and type list
+- Search by name
+- Filter by type
+- Pokemon grid with name, type, level, and level gauge
+- Separate components for filters and grid
+- Basic project structure with functional components and hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+src/
+  components/
+    Filters.js
+    PokemonGrid.js
+  utils/
+    api.js
+  App.js
+  index.js
+  index.css
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Mock API (src/utils/api.js)
 
-### `npm test`
+### fetchTypes()
+Returns a list of Pokemon types.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### fetchPokemons(params)
+Filters Pokemon by:
+- search - match by name
+- type - match by type
+Returns the filtered list.
 
-### `npm run build`
+## Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### App.js
+- Loads Pokemon types
+- Loads filtered Pokemon
+- Manages search and type filter state
+- Renders Filters and PokemonGrid
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Filters.js
+- Search text input
+- Type selection dropdown
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### PokemonGrid.js
+- Renders Pokemon cards
+- Displays name, type, level, and level gauge
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the development server:
 
-## Learn More
+```
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app is available at:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+http://localhost:3000
+```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Enter a name in the search input to filter Pokemon
+- Select a type from the dropdown to filter by type
+- View the updated list in the Pokemon grid
 
-### Analyzing the Bundle Size
+## Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- React Hooks
+- Create React App
+- Basic CSS
